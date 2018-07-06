@@ -89,7 +89,6 @@ function changeLineHeight(lineHeight) {
 }
 
 function getCurrentFontSize() {
-  page.console.log(fontSizeDisplay.getAttribute('value').match(/[0-9]+/))
   return parseInt(fontSizeDisplay.getAttribute('value').match(/[0-9]+/)[0]);
 }
 function getCurrentLineHeight() {
