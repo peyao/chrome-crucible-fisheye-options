@@ -30,7 +30,7 @@ function changeCSS(css) {
 function changeFontSize(fontSize) {
   const css = `
     td.lineContent {
-      font-size: ${fontSize}px !important;
+      font-size: ${fontSize}px;
     }
   `;
   changeCSS(css);
@@ -45,7 +45,7 @@ function changeFontSize(fontSize) {
 function changeLineHeight(lineHeight) {
   const css = `
     tr.sourceLine {
-      height: ${lineHeight}px !important;
+      height: ${lineHeight}px;
     }
   `;
   changeCSS(css);
