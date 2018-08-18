@@ -4,11 +4,20 @@ const HOST_URL = '';
 
 chrome.runtime.onInstalled.addListener(function() {
 
-  chrome.storage.sync.set({ fontSize: DEFAULT_FONT_SIZE }, function() {
-    console.log("The font size is ", DEFAULT_FONT_SIZE);
+  chrome.storage.sync.get('fontSize', (data) => {
+    if (!data.fontSize) {
+      chrome.storage.sync.set({ fontSize: DEFAULT_FONT_SIZE }, function() {
+        console.log("The font size is ", DEFAULT_FONT_SIZE);
+      });
+    }
   });
-  chrome.storage.sync.set({ lineHeight: DEFAULT_LINE_HEIGHT }, function() {
-    console.log("The line height is ", DEFAULT_LINE_HEIGHT);
+
+  chrome.storage.sync.get('lineHeight', (data) => {
+    if (!data.lineHeight) {
+      chrome.storage.sync.set({ lineHeight: DEFAULT_LINE_HEIGHT }, function() {
+        console.log("The line height is ", DEFAULT_LINE_HEIGHT);
+      });
+    }
   });
 
   chrome.declarativeContent.onPageChanged.removeRules(undefined, function() {
