@@ -50,3 +50,16 @@ function changeLineHeight(lineHeight) {
   `;
   changeCSS(css);
 }
+
+/**
+ * Other CSS to apply on init (TODO: Refactor this out)
+ */
+(function otherCSS() {
+  const css = `
+    .mimelink .mime-image img {
+      max-width: 100%;
+      height: auto;
+    }
+  `;
+  changeCSS(css);
+})();
