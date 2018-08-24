@@ -1,6 +1,9 @@
 # chrome-crucible-fisheye-options
 A Chrome extension for Atlassian Crucible &amp; Fisheye that allows changing your font size and line height for comfier code reviewing.
 
+## Additional Changes
+* Attachment images are responsive to screen width.
+
 # How to use
 
 1. Change the `HOST_URL` in **background.js** to some domain like: `crucible.mydomain.com`.
